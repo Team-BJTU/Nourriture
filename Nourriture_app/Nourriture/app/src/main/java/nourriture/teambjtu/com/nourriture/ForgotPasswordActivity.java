@@ -4,14 +4,30 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
 
 
 public class ForgotPasswordActivity extends ActionBarActivity {
+
+    public EditText EmailForgetPassword;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot_password);
+
+        EmailForgetPassword = (EditText) findViewById(R.id.EmailForgetPassword);
+
+        EmailForgetPassword.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                EmailForgetPassword.setText("");
+            }
+        });
+
     }
 
 

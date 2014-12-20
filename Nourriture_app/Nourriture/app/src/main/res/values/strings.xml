@@ -24,5 +24,11 @@
     <string name="ResetPassword">Reset Password</string>
     <string name="EnterYourEmail">Please Enter Your Email :</string>
     <string name="EmailEditTextFP">Email</string>
+    <string name="PleaseEnterYourUsername">Please Enter Your Username</string>
+    <string name="PleaseEnterYourPassword">Password</string>
+    <string name="FirstNameTextView">First Name</string>
+    <string name="LastNameTextView">Last Name</string>
+    <string name="EmailTextView">Email</string>
+    <string name="UsernameTextView">Username</string>
 
 </resources>

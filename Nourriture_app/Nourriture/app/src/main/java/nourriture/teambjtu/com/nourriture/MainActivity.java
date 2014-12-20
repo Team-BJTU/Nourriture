@@ -6,9 +6,13 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 
 
 public class MainActivity extends ActionBarActivity {
+
+    public EditText UsernameEditText;
+    public EditText PasswordEditText;
 
 
     public void CreateAnAccount(View view) {
@@ -26,6 +30,25 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        UsernameEditText = (EditText) findViewById(R.id.UsernameEditText);
+        PasswordEditText = (EditText) findViewById(R.id.PasswordEditText);
+
+        UsernameEditText.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                UsernameEditText.setText("");
+            }
+        });
+
+        PasswordEditText.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                PasswordEditText.setText("");
+            }
+        });
     }
 
 

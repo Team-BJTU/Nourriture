@@ -14,7 +14,8 @@
         android:id="@+id/TitleNourrituretextView"
         android:textSize="60dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="#ff2125ff" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -25,7 +26,9 @@
         android:layout_alignRight="@+id/TitleNourrituretextView"
         android:layout_alignEnd="@+id/TitleNourrituretextView"
         android:layout_alignLeft="@+id/TitleNourrituretextView"
-        android:layout_alignStart="@+id/TitleNourrituretextView" />
+        android:layout_alignStart="@+id/TitleNourrituretextView"
+        android:text="@string/PleaseEnterYourUsername"
+        android:textColor="#ff808080" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -37,7 +40,9 @@
         android:layout_alignLeft="@+id/UsernameEditText"
         android:layout_alignStart="@+id/UsernameEditText"
         android:layout_alignRight="@+id/UsernameEditText"
-        android:layout_alignEnd="@+id/UsernameEditText" />
+        android:layout_alignEnd="@+id/UsernameEditText"
+        android:text="@string/PleaseEnterYourPassword"
+        android:textColor="#ff808080" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -47,7 +52,8 @@
         android:id="@+id/UsernameLabel"
         android:layout_alignBottom="@+id/UsernameEditText"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="45dp" />
+        android:layout_marginBottom="45dp"
+        android:textColor="#ff000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -57,7 +63,8 @@
         android:id="@+id/PasswordLabel"
         android:layout_centerVertical="true"
         android:layout_alignLeft="@+id/UsernameLabel"
-        android:layout_alignStart="@+id/UsernameLabel" />
+        android:layout_alignStart="@+id/UsernameLabel"
+        android:textColor="#ff000000" />
 
     <Button
         android:layout_width="wrap_content"
