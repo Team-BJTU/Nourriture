@@ -4,7 +4,7 @@ NOURRITURE PROJECT
 
 How to launch the project:
 
-    sudo mongod -dbpath lib/
-    ./api
+    - sudo mongod -dbpath lib/
+    - sudo ./api
 
 Dev by Bjtu Corp

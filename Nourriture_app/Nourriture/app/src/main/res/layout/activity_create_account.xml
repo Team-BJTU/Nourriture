@@ -65,12 +65,11 @@
         android:ems="10"
         android:id="@+id/editText5"
         android:text="@string/PasswordEditText"
-        android:layout_below="@+id/editText4"
+        android:layout_above="@+id/textView2"
         android:layout_alignLeft="@+id/editText4"
         android:layout_alignStart="@+id/editText4"
-        android:layout_marginTop="97dp"
-        android:layout_alignRight="@+id/editText4"
-        android:layout_alignEnd="@+id/editText4" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -79,10 +78,10 @@
         android:ems="10"
         android:id="@+id/editText6"
         android:text="@string/RetypePasswordEditText"
-        android:layout_below="@+id/editText5"
+        android:layout_above="@+id/button"
         android:layout_alignLeft="@+id/editText5"
         android:layout_alignStart="@+id/editText5"
-        android:layout_marginTop="45dp"
+        android:layout_marginBottom="37dp"
         android:layout_alignRight="@+id/editText5"
         android:layout_alignEnd="@+id/editText5" />
 
@@ -104,7 +103,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/PasswordTextView"
         android:id="@+id/textView"
-        android:layout_centerVertical="true"
+        android:layout_above="@+id/editText5"
         android:layout_alignLeft="@+id/editText5"
         android:layout_alignStart="@+id/editText5" />
 
@@ -114,7 +113,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/RetypePasswordTextView"
         android:id="@+id/textView2"
-        android:layout_below="@+id/editText5"
+        android:layout_above="@+id/editText6"
         android:layout_alignLeft="@+id/editText6"
         android:layout_alignStart="@+id/editText6" />
 
