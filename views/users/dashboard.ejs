@@ -1,5 +1,9 @@
 <% layout(layoutPath) -%>
 
+Welcome to your dashboard, <%= user.firstName %>.
+
+Au calme, je suis bien connecté dans le vaisseau
+
 <html ng-app="ui.bootstrap.demo">
 
 <head>
@@ -12,9 +16,9 @@
   <body>
 
 <div ng-controller="DropdownCtrl">
-<div class="bs-example">
+<div class="bs-example" >
 	<div class="row">
-	  <div class="col-sm-6 col-md-4">
+	  <div class="col-md-6 col-md-offset-3">
 	    <div class="thumbnail">
 	      <div class="caption">
 	        <h3>Country</h3>
@@ -38,7 +42,7 @@
 	  </div>
 	</div>
 	<div class="row">
-	  <div class="col-sm-6 col-md-4">
+	  <div class="col-md-6 col-md-offset-3">
 	    <div class="thumbnail">
  			<div class="caption">
 	        <h3>Ingredient</h3>
@@ -71,7 +75,3 @@
 
   </body>
 </html>
-
-Welcome to your dashboard, <%= user.firstName %>.
-
-Au calme, je suis bien connecté dans le vaisseau
