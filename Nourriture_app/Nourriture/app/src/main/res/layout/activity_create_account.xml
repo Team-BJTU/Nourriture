@@ -55,9 +55,9 @@
         android:id="@+id/UserNameEditText"
         android:text="@string/UsernameEditText"
         android:textColor="#ff808080"
-        android:layout_above="@+id/PasswordTextView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView6"
+        android:layout_alignLeft="@+id/textView6"
+        android:layout_alignStart="@+id/textView6"
         android:layout_alignRight="@+id/EmailEditText"
         android:layout_alignEnd="@+id/EmailEditText" />
 
@@ -68,12 +68,12 @@
         android:ems="10"
         android:id="@+id/PasswordEditText"
         android:text="@string/PasswordEditText"
+        android:textColor="#ff808080"
         android:layout_above="@+id/RetypePassTextView"
-        android:layout_alignLeft="@+id/UserNameEditText"
-        android:layout_alignStart="@+id/UserNameEditText"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:textColor="#ff808080" />
+        android:layout_alignLeft="@+id/PasswordTextView"
+        android:layout_alignStart="@+id/PasswordTextView"
+        android:layout_alignRight="@+id/UserNameEditText"
+        android:layout_alignEnd="@+id/UserNameEditText" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -108,10 +108,10 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/PasswordTextView"
         android:id="@+id/PasswordTextView"
+        android:textColor="#ff000000"
         android:layout_above="@+id/PasswordEditText"
-        android:layout_alignLeft="@+id/PasswordEditText"
-        android:layout_alignStart="@+id/PasswordEditText"
-        android:textColor="#ff000000" />
+        android:layout_alignLeft="@+id/UserNameEditText"
+        android:layout_alignStart="@+id/UserNameEditText" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -119,10 +119,10 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/RetypePasswordTextView"
         android:id="@+id/RetypePassTextView"
+        android:textColor="#ff000000"
         android:layout_above="@+id/RetypePasswordEditText"
         android:layout_alignLeft="@+id/RetypePasswordEditText"
-        android:layout_alignStart="@+id/RetypePasswordEditText"
-        android:textColor="#ff000000" />
+        android:layout_alignStart="@+id/RetypePasswordEditText" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -141,11 +141,10 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/LastNameTextView"
         android:id="@+id/textView2"
-        android:layout_marginTop="26dp"
+        android:textColor="#ff000000"
         android:layout_below="@+id/FirstNameEditText"
         android:layout_alignLeft="@+id/FirstNameEditText"
-        android:layout_alignStart="@+id/FirstNameEditText"
-        android:textColor="#ff000000" />
+        android:layout_alignStart="@+id/FirstNameEditText" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -153,11 +152,10 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/EmailTextView"
         android:id="@+id/textView5"
+        android:textColor="#ff000000"
         android:layout_below="@+id/LastNameEditText"
         android:layout_alignLeft="@+id/LastNameEditText"
-        android:layout_alignStart="@+id/LastNameEditText"
-        android:layout_marginTop="29dp"
-        android:textColor="#ff000000" />
+        android:layout_alignStart="@+id/LastNameEditText" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -165,9 +163,9 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/UsernameTextView"
         android:id="@+id/textView6"
-        android:layout_above="@+id/UserNameEditText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textColor="#ff000000" />
+        android:textColor="#ff000000"
+        android:layout_below="@+id/EmailEditText"
+        android:layout_alignLeft="@+id/EmailEditText"
+        android:layout_alignStart="@+id/EmailEditText" />
 
 </RelativeLayout>

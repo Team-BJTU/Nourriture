@@ -30,5 +30,6 @@
     <string name="LastNameTextView">Last Name</string>
     <string name="EmailTextView">Email</string>
     <string name="UsernameTextView">Username</string>
+    <string name="SendEmailButton">Send</string>
 
 </resources>
