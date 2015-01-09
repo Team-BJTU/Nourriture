@@ -31,5 +31,32 @@
     <string name="EmailTextView">Email</string>
     <string name="UsernameTextView">Username</string>
     <string name="SendEmailButton">Send</string>
+    <string name="title_activity_log_in">Welcome to Nourriture</string>
+    <string name="CountryTitle">Country</string>
+    <string name="IngredientsTitle">Ingredients</string>
+    <string name="AddButton">Add</string>
+    <string name="CreateReceipeButton">Create Receipe</string>
+    <string name="ListReceipe">List Current Ingredients</string>
+
+    <string-array name="country_array">
+        <item>France</item>
+        <item>United-State</item>
+    </string-array>
+    <string-array name="ingredients_array">
+        <item>Tomato</item>
+        <item>Salad</item>
+        <item>Corn</item>
+        <item>Potato</item>
+        <item>Spinach</item>
+        <item>Bean</item>
+        <item>Onion</item>
+        <item>Tuna</item>
+        <item>Shrimp</item>
+        <item>Noddles</item>
+        <item>Rice</item>
+        <item>Soy</item>
+    </string-array>
+
+    <string name="title_activity_ingredient_list">Ingredients list</string>
 
 </resources>
