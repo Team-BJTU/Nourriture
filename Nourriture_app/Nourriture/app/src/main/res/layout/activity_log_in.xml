@@ -71,10 +71,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/AddButton"
-        android:id="@+id/button"
+        android:id="@+id/AddIngredientsButton"
         android:layout_alignTop="@+id/IngredientsSpinner"
         android:layout_toRightOf="@+id/ContryTitle"
-        android:layout_toEndOf="@+id/ContryTitle" />
+        android:layout_toEndOf="@+id/ContryTitle"
+        android:onClick="AddIngredients"/>
 
     <Button
         android:layout_width="wrap_content"

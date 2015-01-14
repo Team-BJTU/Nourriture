@@ -1,19 +1,41 @@
 package nourriture.teambjtu.com.nourriture;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
+
+import java.util.ArrayList;
 
 
 public class LogInActivity extends ActionBarActivity {
 
     private Spinner CountrySpinner;
     private Spinner IngredientsSpinner;
+    //private Button AddIngredientsButton;
+
+    //LIST OF ARRAY STRINGS WHICH WILL SERVE AS LIST ITEMS
+    ArrayList<String> listItems = new ArrayList<String>();
+
+    //DEFINING A STRING ADAPTER WHICH WILL HANDLE THE DATA OF THE LISTVIEW
+    ArrayAdapter<String> adapter;
+
+    //RECORDING HOW MANY TIMES THE BUTTON HAS BEEN CLICKED
+    int clickCounter = 0;
+
+
+    public void AddIngredients(View v) {
+        String IngredientsSpinnerValue = IngredientsSpinner.getSelectedItem().toString();
+        Log.v("IngredientsValue", IngredientsSpinnerValue);
+    }
 
     public void IngredientList(View view) {
         Intent intent = new Intent(this, IngredientListActivity.class);
@@ -27,20 +49,47 @@ public class LogInActivity extends ActionBarActivity {
 
         CountrySpinner = (Spinner) findViewById(R.id.CountrySpinner);
         IngredientsSpinner = (Spinner) findViewById(R.id.IngredientsSpinner);
+        //AddIngredientsButton = (Button) findViewById(R.id.AddIngredientsButton);
 
-// Create an ArrayAdapter using the string array and a default spinner layout
+        // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> CountryAdapter = ArrayAdapter.createFromResource(this, R.array.country_array, android.R.layout.simple_spinner_item);
         ArrayAdapter<CharSequence> IngredientsAdapter = ArrayAdapter.createFromResource(this, R.array.ingredients_array, android.R.layout.simple_spinner_item);
 
-// Specify the layout to use when the list of choices appears
+        // Specify the layout to use when the list of choices appears
         CountryAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         IngredientsAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-// Apply the adapter to the spinner
+        // Apply the adapter to the spinner
         CountrySpinner.setAdapter(CountryAdapter);
         IngredientsSpinner.setAdapter(IngredientsAdapter);
-    }
 
+
+        /*AddIngredientsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String IngredientsSpinnerValue = IngredientsSpinner.getSelectedItem().toString();
+                Log.v("IngredientsValue", IngredientsSpinnerValue);
+
+            }
+        });*/
+
+   }
+
+
+ /*  public class SpinnerActivity extends Activity implements AdapterView.OnItemSelectedListener {
+
+        public void onItemSelected(AdapterView<?> parent, View view,
+                                   int pos, long id) {
+            // An item was selected. You can retrieve the selected item using
+            parent.getItemAtPosition(pos);
+            IngredientsSpinner.setOnItemSelectedListener(this);
+
+        }
+
+        public void onNothingSelected(AdapterView<?> parent) {
+            // Another interface callback
+        }
+   }*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
