@@ -5,11 +5,11 @@ var mongoose = require('mongoose')
 
 var UserSchema = new Schema({
   createdAt : { type: Date, default: Date.now },
-  username : { type: String, required: true, index: { unique: true } },
-  firstName : { type: String, required: true, index: { unique: false } },
-  lastName : { type: String, required: true, index: { unique: false } },
-  email : { type: String, required: true, index: { unique: true } },
-  password : { type: String, required: true },
+  username : { type: String, required: false, index: { unique: true } },
+  firstName : { type: String, required: false, index: { unique: false } },
+  lastName : { type: String, required: false, index: { unique: false } },
+  email : { type: String, required: false, index: { unique: true } },
+  password : { type: String, required: false },
   resetPasswordToken : { type: String, required: false },
   resetPasswordTokenCreatedAt : { type: Date }
 });
