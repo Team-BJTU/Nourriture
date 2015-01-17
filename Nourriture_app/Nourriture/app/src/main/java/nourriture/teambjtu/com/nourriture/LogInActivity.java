@@ -1,17 +1,16 @@
 package nourriture.teambjtu.com.nourriture;
 
-import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -20,25 +19,47 @@ public class LogInActivity extends ActionBarActivity {
 
     private Spinner CountrySpinner;
     private Spinner IngredientsSpinner;
-    //private Button AddIngredientsButton;
 
-    //LIST OF ARRAY STRINGS WHICH WILL SERVE AS LIST ITEMS
-    ArrayList<String> listItems = new ArrayList<String>();
-
-    //DEFINING A STRING ADAPTER WHICH WILL HANDLE THE DATA OF THE LISTVIEW
-    ArrayAdapter<String> adapter;
-
-    //RECORDING HOW MANY TIMES THE BUTTON HAS BEEN CLICKED
-    int clickCounter = 0;
+    //LIST OF GLOBAL ARRAY STRINGS WHICH WILL SERVE AS LIST ITEMS
+    public static ArrayList<String> listItems = new ArrayList<String>();
 
 
     public void AddIngredients(View v) {
         String IngredientsSpinnerValue = IngredientsSpinner.getSelectedItem().toString();
-        Log.v("IngredientsValue", IngredientsSpinnerValue);
+        Log.i("IngredientsValue", IngredientsSpinnerValue);
+        listItems.add(IngredientsSpinnerValue);
+
+        //Display items on the list.
+        /*for (String Items : listItems )
+        {
+            Log.i("IngredientList", Items);
+        }*/
+    }
+
+    public void CreateReceipe(View view) {
+
+        int duration = Toast.LENGTH_SHORT;
+
+        ArrayList<String> NewReceipe = new ArrayList<String>();
+        NewReceipe = listItems;
+
+
+        
+
+        listItems.clear();
+
+        Context context = getApplicationContext();
+        CharSequence text = "A new receipe has been created !";
+
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
     }
 
     public void IngredientList(View view) {
+        Bundle extra = new Bundle();
+        extra.putSerializable("listItems", listItems);
         Intent intent = new Intent(this, IngredientListActivity.class);
+        intent.putExtra("extra", extra);
         startActivity(intent);
     }
 
@@ -49,7 +70,6 @@ public class LogInActivity extends ActionBarActivity {
 
         CountrySpinner = (Spinner) findViewById(R.id.CountrySpinner);
         IngredientsSpinner = (Spinner) findViewById(R.id.IngredientsSpinner);
-        //AddIngredientsButton = (Button) findViewById(R.id.AddIngredientsButton);
 
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> CountryAdapter = ArrayAdapter.createFromResource(this, R.array.country_array, android.R.layout.simple_spinner_item);
@@ -62,34 +82,7 @@ public class LogInActivity extends ActionBarActivity {
         // Apply the adapter to the spinner
         CountrySpinner.setAdapter(CountryAdapter);
         IngredientsSpinner.setAdapter(IngredientsAdapter);
-
-
-        /*AddIngredientsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String IngredientsSpinnerValue = IngredientsSpinner.getSelectedItem().toString();
-                Log.v("IngredientsValue", IngredientsSpinnerValue);
-
-            }
-        });*/
-
    }
-
-
- /*  public class SpinnerActivity extends Activity implements AdapterView.OnItemSelectedListener {
-
-        public void onItemSelected(AdapterView<?> parent, View view,
-                                   int pos, long id) {
-            // An item was selected. You can retrieve the selected item using
-            parent.getItemAtPosition(pos);
-            IngredientsSpinner.setOnItemSelectedListener(this);
-
-        }
-
-        public void onNothingSelected(AdapterView<?> parent) {
-            // Another interface callback
-        }
-   }*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

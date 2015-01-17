@@ -4,14 +4,36 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 
 public class IngredientListActivity extends ActionBarActivity {
+
+    private ListView IngredientList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ingredient_list);
+
+        IngredientList = (ListView) findViewById(R.id.IngredientsList);
+
+        Bundle extra = getIntent().getBundleExtra("extra");
+        ArrayList<String> listItems = (ArrayList<String>) extra.getSerializable("listItems");
+
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listItems );
+
+        IngredientList.setAdapter(arrayAdapter);
+
+        //Display items on the list.
+        /*for (String Items : listItems )
+        {
+            Log.i("IngredientList", Items);
+        }*/
+
     }
 
 

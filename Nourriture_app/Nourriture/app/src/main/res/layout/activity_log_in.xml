@@ -58,13 +58,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/CreateReceipeButton"
-        android:id="@+id/button2"
+        android:id="@+id/CreateReceipeButton"
         android:layout_below="@+id/IngredientsSpinner"
         android:layout_alignLeft="@+id/IngredientsSpinner"
         android:layout_alignStart="@+id/IngredientsSpinner"
         android:layout_marginTop="56dp"
         android:layout_alignRight="@+id/IngredientsTitle"
-        android:layout_alignEnd="@+id/IngredientsTitle" />
+        android:layout_alignEnd="@+id/IngredientsTitle"
+        android:onClick="CreateReceipe"/>
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -81,12 +82,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/ListReceipe"
-        android:id="@+id/button3"
-        android:layout_below="@+id/button2"
-        android:layout_alignLeft="@+id/button2"
-        android:layout_alignStart="@+id/button2"
-        android:layout_alignRight="@+id/button2"
-        android:layout_alignEnd="@+id/button2"
+        android:id="@+id/ListReceipeButton"
+        android:layout_below="@+id/CreateReceipeButton"
+        android:layout_alignLeft="@+id/CreateReceipeButton"
+        android:layout_alignStart="@+id/CreateReceipeButton"
+        android:layout_alignRight="@+id/CreateReceipeButton"
+        android:layout_alignEnd="@+id/CreateReceipeButton"
         android:onClick="IngredientList"/>
 
 </RelativeLayout>
