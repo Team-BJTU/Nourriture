@@ -1,7 +1,7 @@
 package nourriture.teambjtu.com.nourriture;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
@@ -31,9 +31,8 @@ public class IngredientListActivity extends ActionBarActivity {
         //Display items on the list.
         /*for (String Items : listItems )
         {
-            Log.i("IngredientList", Items);
+            Log.i("IngredientListInActivity", Items);
         }*/
-
     }
 
 

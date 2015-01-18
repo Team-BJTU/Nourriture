@@ -2,6 +2,7 @@ package nourriture.teambjtu.com.nourriture;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
@@ -43,8 +44,9 @@ public class LogInActivity extends ActionBarActivity {
         ArrayList<String> NewReceipe = new ArrayList<String>();
         NewReceipe = listItems;
 
+        /*CreateReceipeClass createreceipe = new CreateReceipeClass();
+        createreceipe.execute();*/
 
-        
 
         listItems.clear();
 
@@ -83,6 +85,37 @@ public class LogInActivity extends ActionBarActivity {
         CountrySpinner.setAdapter(CountryAdapter);
         IngredientsSpinner.setAdapter(IngredientsAdapter);
    }
+
+
+    /*private class CreateReceipeClass  extends AsyncTask<Void, Integer, Void>
+    {
+
+        @Override
+        protected void onPreExecute()
+        {
+            super.onPreExecute();
+            Log.v("PreExecute", "On PreExcute");
+        }
+
+
+        @Override
+        protected void onProgressUpdate(Integer... values) {
+            super.onProgressUpdate(values);
+            Log.v("OnProgressUpdate", "On ProgressUpdate");
+
+        }
+
+        @Override
+        protected Void doInBackground(Void... params) {
+
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void result) {
+            Toast.makeText(getApplicationContext(), "Attempt to login is over !", Toast.LENGTH_LONG).show();
+        }
+    }*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
