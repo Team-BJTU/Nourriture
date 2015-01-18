@@ -250,8 +250,8 @@ app.post('/reset_password', redirectAuthenticated, users.generate_password_reset
 app.get('/password_reset', redirectAuthenticated, users.password_reset);
 app.post('/password_reset', redirectAuthenticated, users.process_password_reset);
 app.post('/login', redirectAuthenticated, users.authenticate);
-//app.get('/register', redirectAuthenticated, users.register);
-//app.post('/register', redirectAuthenticated, users.userValidations, users.create);
+app.get('/register', redirectAuthenticated, users.register);
+app.post('/register', redirectAuthenticated, users.userValidations, users.create);
 app.get('/account', ensureAuthenticated, users.account);
 app.post('/account', ensureAuthenticated, users.userValidations, users.update);
 app.get('/dashboard', ensureAuthenticated, users.dashboard);
@@ -272,3 +272,5 @@ db.once('open', function callback () {
       console.log('Express server listening on port ' + app.get('port'));
   });
 });
+
+
