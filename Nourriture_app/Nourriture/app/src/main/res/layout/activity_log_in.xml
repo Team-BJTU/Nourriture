@@ -28,8 +28,7 @@
         android:layout_alignLeft="@+id/IngredientsTitle"
         android:layout_alignStart="@+id/IngredientsTitle"
         android:layout_alignRight="@+id/ContryTitle"
-        android:layout_alignEnd="@+id/ContryTitle"
-        android:spinnerMode="dialog" />
+        android:layout_alignEnd="@+id/ContryTitle" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -51,8 +50,7 @@
         android:layout_alignLeft="@+id/IngredientsTitle"
         android:layout_alignStart="@+id/IngredientsTitle"
         android:layout_alignRight="@+id/ContryTitle"
-        android:layout_alignEnd="@+id/ContryTitle"
-        android:spinnerMode="dialog" />
+        android:layout_alignEnd="@+id/ContryTitle" />
 
     <Button
         android:layout_width="wrap_content"

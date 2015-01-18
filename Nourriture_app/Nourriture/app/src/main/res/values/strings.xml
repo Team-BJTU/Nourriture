@@ -40,7 +40,7 @@
 
     <string-array name="country_array">
         <item>France</item>
-        <item>United-State</item>
+        <item>China</item>
     </string-array>
     <string-array name="ingredients_array">
         <item>Tomato</item>
@@ -55,6 +55,16 @@
         <item>Noddles</item>
         <item>Rice</item>
         <item>Soy</item>
+        <item>lamb</item>
+        <item>cod</item>
+        <item>breaded fish</item>
+        <item>salmon</item>
+        <item>hake</item>
+        <item>banana</item>
+        <item>apple</item>
+        <item>grapes</item>
+        <item>strawberry</item>
+        <item>raspberry</item>
     </string-array>
 
     <string name="title_activity_ingredient_list">Ingredients list</string>
