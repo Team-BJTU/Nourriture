@@ -35,7 +35,7 @@
     <string name="CountryTitle">Country</string>
     <string name="IngredientsTitle">Ingredients</string>
     <string name="AddButton">Add</string>
-    <string name="CreateReceipeButton">Create Receipe</string>
+    <string name="CreateReceipeButton">Create Recipe</string>
     <string name="ListReceipe">List Current Ingredients</string>
 
     <string-array name="country_array">
